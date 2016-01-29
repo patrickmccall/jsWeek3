@@ -19,7 +19,7 @@ function buildThumbnails() {
   //create and output variable
   var output = "";
 
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < imageList.length; i++) {
 
     output += '<img src="' + imageList[i] + '" />';
     thumbsDiv.innerHTML = output;
