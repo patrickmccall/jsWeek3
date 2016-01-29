@@ -19,10 +19,18 @@ function buildThumbnails() {
   //create and output variable
   var output = "";
 
-  thumbsDiv.innerHTML = '<img src="' + imageList[0] + '" />'
-                      + '<img src="' + imageList[1] + '" />'
-                      + '<img src="' + imageList[2] + '" />'
-                      + '<img src="' + imageList[3] + '" />';
+  for (var i = 0; i < 5; i++) {
+
+    output += '<img src="' + imageList[i] + '" />';
+    thumbsDiv.innerHTML = output;
+
+    //thumbsDiv.innerHTML += '<img src="' + imageList[i] + '" />'
+  }
+
+  //thumbsDiv.innerHTML = '<img src="' + imageList[0] + '" />'
+  //                    + '<img src="' + imageList[1] + '" />'
+  //                    + '<img src="' + imageList[2] + '" />'
+  //                    + '<img src="' + imageList[3] + '" />';
 }
 
 
