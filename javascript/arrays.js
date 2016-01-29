@@ -1,5 +1,7 @@
 ﻿var colorList = ["red", "black", "white", "blue", "ocher", "yellow", "pink"];
 
+// variables IN funceion (function scope) can see global variables
+
   var imageList = new Array();
   imageList[0] = "images/drawing/thumbs/artwork_1.jpg";
   imageList[1] = "images/drawing/thumbs/artwork_2.jpg";
@@ -13,6 +15,9 @@
 function buildThumbnails() {
     //hook into the thumbs div
   var thumbsDiv = document.getElementById("thumbs");
+
+  //create and output variable
+  var output = "";
 
   thumbsDiv.innerHTML = '<img src="' + imageList[0] + '" />'
                       + '<img src="' + imageList[1] + '" />'
