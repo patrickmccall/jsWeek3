@@ -12,32 +12,68 @@
 
 
 //create the build thumbnails function
-function buildThumbnails() {
-    //hook into the thumbs div
-  var thumbsDiv = document.getElementById("thumbs");
+  //function buildDrawingThumbnails() {
+  //    //hook into the thumbs div
+  //    var thumbsDiv = document.getElementById("drawingImages");
 
-  //create and output variable
-  var output = "";
+  //    //create and output variable
+  //    var output = "";
 
-  for (var i = 0; i < imageList.length; i++) {
+  //    for (var i = 0; i < imageList.length; i++) {
 
-    output += '<img src="' + imageList[i] + '" />';
-    thumbsDiv.innerHTML = output;
+  //        output += '<li><img src="' + imageList[i] + '" /></li>';
+  //        thumbsDiv.innerHTML = output;
 
-    //thumbsDiv.innerHTML += '<img src="' + imageList[i] + '" />'
-  }
+  //        //thumbsDiv.innerHTML += '<img src="' + imageList[i] + '" />'
+  //    }
 
-  //thumbsDiv.innerHTML = '<img src="' + imageList[0] + '" />'
-  //                    + '<img src="' + imageList[1] + '" />'
-  //                    + '<img src="' + imageList[2] + '" />'
-  //                    + '<img src="' + imageList[3] + '" />';
-}
+  //    //thumbsDiv.innerHTML = '<img src="' + imageList[0] + '" />'
+  //    //                    + '<img src="' + imageList[1] + '" />'
+  //    //                    + '<img src="' + imageList[2] + '" />'
+  //    //                    + '<img src="' + imageList[3] + '" />';
+  //};
 
+  var drawingImageCount = 25;
+  function buildDrawingThumbnails() {
+      var output = "";
+      var drawingThumbsUL = document.getElementById("drawingImages");
+      //built the output
+      for (var i = 1; i < drawingImageCount + 1; i++) {
+          output += '<li><img src="images/drawing/thumbs/artwork_' + i + '.jpg" /></li>';
+      }
+      //use the output
+      drawingThumbsUL.innerHTML = output;
 
+  };
 
+  var oilImageCount = 8;
+  function buildOilThumbnails() {
+      var output = "";
+      var oilThumbsUL = document.getElementById("oilPaintingImages");
+      //built the output
+      for (var i = 1; i < oilImageCount + 1; i++) {
+          output += '<li><img src="images/oil/thumbs/artwork_' + i + '.jpg" /></li>';
+      }
+      //use the output
+      oilThumbsUL.innerHTML = output;
 
+  };
 
+  var waterColorImageCount = 10;
+  function buildwatercolorThumbnails() {
+      var output = "";
+      var watercolorThumbsUL = document.getElementById("watercolorImages");
+      //built the output
+      for (var i = 1; i < waterColorImageCount + 1; i++) {
+          output += '<li><img src="images/watercolor/thumbs/artwork_' + i + '.jpg" /></li>';
+      }
+      //use the output
+      watercolorThumbsUL.innerHTML = output;
+
+  };
 window.onload = function () {
-  buildThumbnails();    //use or "fire off" or invoke this function
+    buildDrawingThumbnails();    //use or "fire off" or invoke this function
+    buildOilThumbnails();
+    buildwatercolorThumbnails();
 };
 
