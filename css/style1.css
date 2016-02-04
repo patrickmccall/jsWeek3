@@ -219,6 +219,13 @@ label{
 
 
 
+/* image list styling*/
+.imageList {
+    text-decoration: none;
+    padding: 5em;
+    list-style-type:none; 
 
+}
 
+.imageList li{display:inline;}
 
